@@ -1,0 +1,86 @@
+{
+  "easycom": {
+		"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/index",
+      "name":"首页",
+      "meta":{
+          "title": "首页"
+      },
+      "style": {
+        "app-plus": {
+          "titleNView": false // 去除导航栏
+        }
+      }
+		},
+    {
+			"path": "pages/other/index",
+      "name":"其它",
+      "meta":{
+        "title": "其它"
+      },
+      "style": {
+        "navigationBarTitleText": "其它",
+        "app-plus": {
+          "titleNView": {
+            "buttons": [{
+              "text": "\ue8a1",
+              "fontSrc": "/static/iconfont/iconfont.ttf",
+              "fontSize": "18",
+              "color": "#222"
+            }]
+          }
+        }
+      }
+		},
+    {
+			"path": "pages/user/index",
+      "name":"我的",
+      "meta":{
+        "title": "我的"
+      },
+      "style": {
+        "app-plus": {
+          "titleNView": false // 去除导航栏
+        }
+      }
+		}
+	],
+  "tabBar": {
+    "color":"#8a8a8a",
+    "selectedColor":"#198aff",
+    "borderStyle":"black",
+    "backgroundColor":"#ffffff",
+    "list": [
+      {
+        "pagePath":"pages/home/index",
+        "text":"首页",
+        "iconPath":"static/img/nav_home.png",
+        "selectedIconPath":"static/img/nav_home_active.png"
+      },
+      {
+        "pagePath":"pages/other/index",
+        "text":"其它",
+        "iconPath":"static/img/nav_other.png",
+        "selectedIconPath":"static/img/nav_other_active.png"
+      },
+      {
+        "pagePath":"pages/user/index",
+        "text":"我的",
+        "iconPath":"static/img/nav_user.png",
+        "selectedIconPath":"static/img/nav_user_active.png"
+      }
+    ]
+  },
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+    "usingComponents": {
+      
+    }
+	}
+}
