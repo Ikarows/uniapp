@@ -3,7 +3,7 @@ import App from './App'
 import store from './store'
 import './config/http.js'
 import './router'
-import './utils/fontsize'
+//import './utils/fontsize'
 import * as  funs from './utils/funs'
 import { RouterMount } from 'uni-simple-router'
 
