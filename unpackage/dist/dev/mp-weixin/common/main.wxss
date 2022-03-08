@@ -1,0 +1,624 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 全局主题 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/*每个页面公共css */
+.u-line-1 {
+
+
+
+
+
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.u-line-2 {
+
+
+
+
+
+
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical !important;
+}
+.u-line-3 {
+
+
+
+
+
+
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical !important;
+}
+.u-line-4 {
+
+
+
+
+
+
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical !important;
+}
+.u-line-5 {
+
+
+
+
+
+
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical !important;
+}
+.u-border {
+  border-width: 0.5px !important;
+  border-color: #dadbde !important;
+  border-style: solid;
+}
+.u-border-top {
+  border-top-width: 0.5px !important;
+  border-color: #dadbde !important;
+  border-top-style: solid;
+}
+.u-border-left {
+  border-left-width: 0.5px !important;
+  border-color: #dadbde !important;
+  border-left-style: solid;
+}
+.u-border-right {
+  border-right-width: 0.5px !important;
+  border-color: #dadbde !important;
+  border-right-style: solid;
+}
+.u-border-bottom {
+  border-bottom-width: 0.5px !important;
+  border-color: #dadbde !important;
+  border-bottom-style: solid;
+}
+.u-border-top-bottom {
+  border-top-width: 0.5px !important;
+  border-bottom-width: 0.5px !important;
+  border-color: #dadbde !important;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+.u-reset-button {
+  padding: 0;
+  background-color: transparent;
+
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+.u-reset-button::after {
+  border: none;
+}
+.u-hover-class {
+  opacity: 0.7;
+}
+.u-safe-area-inset-top {
+  padding-top: 0;
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+.u-safe-area-inset-right {
+  padding-right: 0;
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+}
+.u-safe-area-inset-bottom {
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.u-safe-area-inset-left {
+  padding-left: 0;
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
+}
+::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
+  -webkit-appearance: none;
+  background: transparent;
+}
+page {
+  color: #262626;
+  background: #fdfdfd;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.padding-tab {
+  padding-bottom: 1.96rem !important;
+}
+/* vant-ui 组件调整 */
+.job-btn {
+  height: 1.76rem;
+  font-size: 0.56rem;
+  border-radius: 0.24rem;
+  background: linear-gradient(360deg, #4bb8fa 0%, #198aff 100%);
+  border: none;
+  color: #FFF;
+}
+.job-btn.job-btn-plain {
+  color: #198AFF;
+  background: none;
+  border: 1px solid #198AFF;
+}
+.job-btn-small {
+  height: 0.98rem;
+  line-height: 0.88rem;
+  border-radius: 0.48rem;
+  font-size: 0.48rem;
+}
+/* 面版 */
+.van-panel {
+  box-shadow: 0px 0.08rem 0.4rem 0px rgba(0, 0, 0, 0.04);
+  border-radius: 0.24rem;
+  overflow: hidden;
+}
+.van-panel .van-cell,
+.van-panel .van-panel__content {
+  padding: 0.6rem;
+}
+.van-panel .panel-header {
+  font-size: 0.72rem;
+  display: flex;
+  margin: 0 0.6rem;
+  padding: 0.6rem 0;
+}
+.van-panel .panel-header .solt-right {
+  margin-left: auto;
+  font-size: 0.52rem;
+  display: flex;
+  align-items: center;
+  line-height: 0.72rem;
+  color: #8b8b8b;
+}
+.van-panel .panel-header .van-icon-arrow::before {
+  font-size: 0.64rem;
+  color: #8b8b8b;
+  margin-left: 0.16rem;
+}
+.van-panel .panel-footer {
+  display: flex;
+  padding: 0.56rem 0;
+}
+.panel-tag {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.panel-tag::before {
+  content: " ";
+  width: 0.16rem;
+  height: 0.64rem;
+  border-radius: 0.08rem;
+  background: linear-gradient(180deg, #4bb8fa 0%, #198aff 100%);
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+/*单选框*/
+.van-radio-group--horizontal {
+  padding: 0.8rem 0.8rem;
+  font-size: 0.64rem;
+  color: #262626;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.van-radio-group--horizontal .van-radio__label {
+  color: #8b8b8b;
+}
+.van-radio-group--horizontal .van-radio__icon {
+  font-size: 0.64rem;
+}
+.van-radio-group--horizontal .radio-sex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.van-radio-group--horizontal .radio-sex .van-radio__icon--checked {
+  background-size: cover;
+}
+.van-radio-group--horizontal .radio-sex .van-radio__icon--checked .van-icon {
+  opacity: 0;
+  border-color: transparent;
+  background-color: transparent;
+}
+/* 栏目 */
+.column {
+  background: none;
+  box-shadow: none;
+}
+.column::after {
+  display: none;
+}
+.divider {
+  color: #8b8b8b;
+  border-color: #8b8b8b;
+  padding: 0 0.5rem;
+}
+.input-box {
+  width: 13.4rem;
+  background: white;
+  box-shadow: 0 0.08rem 0.4rem 0 rgba(0, 0, 0, 0.04);
+  border-radius: 0.24rem;
+  margin: 0 auto;
+  margin-top: -3.8rem;
+  position: relative;
+}
+.input-box > ._div:nth-child(1) {
+  padding-top: 0.8rem;
+  padding: 1rem 1rem 2.4rem 1rem;
+}
+.input-box .van-cell {
+  line-height: 1.76rem;
+  font-size: 0.64rem;
+  padding: 0.4rem 0;
+}
+.input-box .van-cell-group {
+  border-bottom: 1px solid #E8E8E8;
+}
+.input-box [class*="van-hairline"]::after {
+  border: none;
+}
+.input-box .van-field .van-icon__image {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.input-box .van-field .van-field__left-icon .van-icon,
+.input-box .van-field .van-field__right-icon .van-icon {
+  font-size: 0.4rem;
+  margin-top: -0.1rem;
+}
+.input-box .van-field .van-field__left-icon {
+  margin-right: 0.4rem;
+}
+.input-box .van-field .van-button--default {
+  color: #198AFF;
+  border: none;
+  background-color: transparent;
+}
+.input-box .van-field .van-divider {
+  font-size: 0.26rem;
+}
+.input-box .van-button--default.sendCode {
+  color: #198AFF;
+  border: 1px solid #198AFF;
+  border-radius: 0.6rem;
+}
+.input-box .van-button--default.imageCode {
+  border: none;
+}
+.confirm-modify {
+  margin: 0.8rem 0.8rem 3rem 0.8rem;
+  color: #fff;
+  width: 13.4rem;
+  border-radius: 0.24rem;
+}
+/* 卡片盒子 */
+.card-box {
+  width: 100%;
+  height: 6.4rem;
+  margin: 0.6rem auto 1.2rem auto;
+  background: linear-gradient(360deg, #4bb8fa 0%, #198aff 100%);
+  border-radius: 0.24rem;
+  position: relative;
+  font-size: 0.48rem;
+}
+.card-box::before {
+  content: ' ';
+  width: 13.8rem;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.card-box::after {
+  content: ' ';
+  width: 13rem;
+  height: 95%;
+  background: linear-gradient(360deg, #4bb8fa 0%, #198aff 100%);
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  -webkit-filter: blur(0.4rem);
+          filter: blur(0.4rem);
+  z-index: -1;
+}
+/* 底部悬浮按钮 */
+.btn-box {
+  padding: 0.4rem 0.8rem;
+  background: #FFF;
+  box-shadow: 0px -0.04rem 0.4rem 0px rgba(0, 0, 0, 0.04);
+}
+.btn-box.fixed {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.btn-box .job-btn {
+  width: 100%;
+}
+.btn-box.btns {
+  padding: 0.32rem;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-box.btns .job-btn-plain {
+  border-width: 0.04rem;
+}
+.btn-box.btns .job-btn {
+  width: 49%;
+}
+/* 底部tab */
+.tabbar .nav-icon {
+  width: 1.04rem;
+  height: 1.04rem;
+}
+.tabbar .van-tabbar-item__icon {
+  margin-bottom: 0.16rem;
+}
+.tabbar .van-tabbar-item {
+  font-size: 0.4rem;
+  color: #a5a5a5;
+}
+.tabbar .van-tabbar-item--active {
+  color: #198AFF;
+}
+.tabbar .nav-box {
+  box-shadow: 0 -0.04rem 0.4rem 0 rgba(0, 0, 0, 0.04);
+}
+/* 导航 */
+.top-nav-bar {
+  height: 1.84rem;
+  line-height: 1.84rem;
+  z-index: 99 !important;
+}
+.top-nav-bar.van-hairline--bottom::after {
+  border-bottom: 1px solid #E8E8E8;
+}
+.top-nav-bar.van-hairline--bottom .van-nav-bar__title {
+  color: #262626;
+}
+.top-nav-bar .van-icon-arrow-left {
+  font-size: 0.8rem !important;
+  color: #262626 !important;
+}
+/* 线颜色 */
+[class*=van-hairline]::after {
+  border-color: #E8E8E8;
+}
+/* tab */
+.van-tabs .van-tabs__line {
+  width: 1.12rem !important;
+  background-color: #198AFF;
+}
+.van-tabs .van-tab {
+  color: #4a4a4a;
+}
+.van-tabs .van-tab--active {
+  color: #198AFF !important;
+}
+/* 遮罩层 */
+.van-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* 下拉加载完成提示语 */
+.van-list__finished-text {
+  font-size: 0.48rem !important;
+  line-height: 0.6rem !important;
+  margin: 0.8rem 0 1.2rem;
+}
+/* 文章列表 */
+.article-list {
+  margin-top: 0.8rem;
+}
+.article-list ._li {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+.article-list .left {
+  width: 8.56rem;
+  margin-right: 1.16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.article-list .left ._h1 {
+  font-size: 0.56rem;
+  line-height: 0.8rem;
+}
+.article-list .bottom {
+  display: flex;
+  font-size: 0.48rem;
+  line-height: 0.68rem;
+}
+.article-list .bottom ._span {
+  color: #8b8b8b;
+}
+.article-list .bottom ._span:first-child {
+  margin-right: auto;
+}
+.article-list .bottom ._span:last-child {
+  margin-left: auto;
+}
+.article-list .right {
+  width: 4.08rem;
+  height: 3rem;
+  box-shadow: 0 0.08rem 0.4rem 0 rgba(0, 0, 0, 0.04);
+  border-radius: 0.24rem;
+  margin-left: auto;
+  overflow: hidden;
+}
+.article-list .right .van-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+/* Dialog */
+.van-dialog {
+  border-radius: 0.4rem !important;
+}
+.van-dialog .van-dialog__header {
+  font-size: 0.64rem;
+  padding: 0.6rem 0;
+  margin: 0 0.8rem 0.8rem 0.8rem;
+  position: relative;
+}
+.van-dialog .van-dialog__header::before {
+  position: absolute;
+  box-sizing: border-box;
+  content: ' ';
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  border-bottom: 1px solid #E8E8E8;
+}
+.van-dialog .van-dialog__footer {
+  text-align: center;
+  padding: 0 0.4rem;
+  justify-content: center;
+  align-items: center;
+}
+.van-dialog .van-dialog__footer::after {
+  display: none;
+}
+.van-dialog .van-dialog__confirm {
+  width: 7rem;
+  height: 1.44rem;
+  line-height: 1.44rem;
+  font-size: 0.56rem;
+  color: #FFF;
+  background: linear-gradient(360deg, #4bb8fa 0%, #198aff 100%);
+  border-radius: 0.24rem;
+  margin: 0.6rem auto;
+}
+.van-dialog .van-dialog__confirm:active {
+  color: #FFF;
+}
+.van-dialog .van-dialog__cancel {
+  width: 7rem;
+  height: 1.44rem;
+  line-height: 1.44rem;
+  font-size: 0.56rem;
+  color: #198AFF;
+  background: none;
+  border-radius: 0.24rem;
+  border: 1px solid #198AFF !important;
+}
+.van-dialog .van-dialog__footer--buttons {
+  text-align: center;
+}
+.van-dialog .van-dialog__footer--buttons .van-button {
+  width: 49%;
+  flex: none;
+}
+.van-dialog .van-dialog__footer--buttons .van-dialog__confirm {
+  margin-right: 0;
+}
+/* 支付密码 */
+.pay-password .van-number-keyboard {
+  position: initial;
+}
+.pay-password .forget {
+  text-align: right;
+  color: #198AFF;
+  margin: 0.8rem;
+  font-size: 0.48rem;
+}
+.pay-password .van-password-input__security ._li {
+  font-size: 1.2rem;
+  border-bottom: 0.04rem solid #4F4F4F;
+}
+.pay-password .keyword-content {
+  padding-top: 1.2rem;
+}
+.frameFile {
+  display: none;
+}
+.clear-btn {
+  font-size: 0.52rem;
+  line-height: 0.92rem;
+  display: inline-block;
+  color: #8b8b8b;
+  position: fixed;
+  top: 0.5rem;
+  right: 2rem;
+  z-index: 999;
+}
+.van-popup.van-notify--danger {
+  background-color: #FC5542;
+}
+.van-dropdown-menu__bar {
+  box-shadow: 0 0 0 !important;
+}
+.van-picker__toolbar {
+  height: 1.92rem !important;
+  background: #f9faf9;
+  line-height: 1.92rem !important;
+}
+.van-field--disabled .van-field__label {
+  color: #262626 !important;
+}
+
