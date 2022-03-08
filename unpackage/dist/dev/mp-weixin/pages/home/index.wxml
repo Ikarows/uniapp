@@ -1,1 +1,0 @@
-<view class="main data-v-71e217db">home<u-alert vue-id="6b3d36ea-1" title="{{title}}" type="warning" description="{{description}}" class="data-v-71e217db" bind:__l="__l"></u-alert></view>

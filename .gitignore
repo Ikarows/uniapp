@@ -1,6 +1,7 @@
 .DS_Store
 .hbuilderx
 node_modules
+unpackage
 /dist
 
 # local env files
