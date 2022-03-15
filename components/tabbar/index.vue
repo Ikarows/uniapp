@@ -1,7 +1,17 @@
 <template>
   <section class="tabbar">
-    <van-tabbar v-model="current" fixed route class="nav-box">
-      <van-tabbar-item v-for="(item, index) in icon" :key="index" replace :to="item.href">
+    <van-tabbar
+      v-model="current"
+      fixed
+      route
+      class="nav-box"
+    >
+      <van-tabbar-item
+        v-for="(item, index) in icon"
+        :key="index"
+        replace
+        :to="item.href"
+      >
         <span :class="current === index ? 'active nav-text' : 'nav-text'">{{ item.name }}</span>
         <img
           slot="icon"

@@ -1,31 +1,31 @@
 <template>
   <view class="main">
-    <u-empty mode="data"></u-empty>
+    <u-empty mode="data" />
   </view>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
-  
+
     }
   },
 
   // 导航栏返回主页按钮
-  onNavigationBarButtonTap(e) {
+  onNavigationBarButtonTap (e) {
     if (e.index === 0) {
-      this.$pages("/pages/home/index", "switchTab");
+      this.$pages('/pages/home/index', 'switchTab')
     }
   },
 
   // 下拉到底部事件
-  onReachBottom() {
-    //this.init(true)
+  onReachBottom () {
+    // this.init(true)
   },
 
   methods: {
-    /*init (isPage = false) {
+    /* init (isPage = false) {
       if (this.finished) return
       this.loading = true
       getEnrollList(this.pages).then(res => {
@@ -41,8 +41,8 @@ export default {
         this.loading = false
       })
     },*/
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss" scoped>

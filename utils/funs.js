@@ -6,8 +6,8 @@ export const toast = (text, icon = false) => {
     uni.showToast({
       title: text,
       duration: 2000,
-      icon: !icon ? 'none': true
-    });
+      icon: !icon ? 'none' : true
+    })
   }, 100)
 }
 
