@@ -9,7 +9,9 @@ import { pages } from 'utils/funs'
 })*/
 
 axios.defaults.baseURL =
-  (process.env.NODE_ENV === 'development' ? 'https://edudev.gongfukeji.cn' : 'https://edudev.gongfukeji.cn') + '/api.php'
+  (process.env.NODE_ENV === 'development'
+    ? 'https://xxx.cn'
+    : 'https://xxx.cn') + '/api.php'
 
 // request拦截器,在请求之前做一些处理
 axios.interceptors.request.use(config => {
