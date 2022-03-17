@@ -155,3 +155,24 @@ export const checkBankCard = (data) => {
 export const amount = (val) => {
   return Number(val).toFixed(2)
 }
+
+/* 存储数据 */
+export const setStorage = (name, data, callback) => {
+  uni.setStorage({
+    key: name,
+    data,
+    success: function () {
+      callback()
+    }
+  })
+}
+
+/* 获取数据 */
+export const getStorage = (name) => {
+  return uni.getStorageSync(name)
+}
+
+/* 删除数据 */
+export const removeStorage = (name) => {
+  return uni.removeStorage({ key: name })
+}
