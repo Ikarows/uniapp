@@ -4,15 +4,14 @@
 	},
   "subPackages": [
     {
-      "root": "pagesA",
+      "root": "pages/users",
       "pages": [
-        
-      ]
-    },
-    {
-      "root": "pagesB",
-      "pages": [
-        
+        {
+          "path": "user_info/index",
+          "style": {
+            "navigationBarTitleText": "用户信息"
+          }
+        }
       ]
     }
   ],
