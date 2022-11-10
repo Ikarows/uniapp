@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "eslint": "eslint --init"
+    "lint": "eslint --fix --ext .js,.vue ./src"
   },
   "dependencies": {
     "@babel/core": "^7.15.8",
@@ -20,7 +20,10 @@
   },
   "devDependencies": {
     "axios": "^0.22.0",
+    "eslint": "^8.27.0",
+    "eslint-plugin-vue": "^8.7.1",
     "qs": "^6.10.1",
-    "uni-read-pages": "^1.0.5"
+    "uni-read-pages": "^1.0.5",
+    "vue-eslint-parser": "^9.1.0"
   }
 }

@@ -1,11 +1,6 @@
 <template>
   <view class="main">
-    home
-    <u-alert
-      :title="title"
-      type="warning"
-      :description="description"
-    />
+    <u-notice-bar :text="text1" />
   </view>
 </template>
 
@@ -13,8 +8,7 @@
 export default {
   data () {
     return {
-      title: 'uView的目标是成为uni-app生态最优秀的UI框架',
-      description: 'uView是uni-app生态专用的UI框架'
+      text1: 'uView UI众多组件覆盖开发过程的各个需求，组件功能丰富，多端兼容。让您快速集成，开箱即用'
     }
   }
 }
