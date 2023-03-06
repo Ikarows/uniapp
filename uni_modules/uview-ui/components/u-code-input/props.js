@@ -1,5 +1,10 @@
 export default {
     props: {
+		// 键盘弹起时，是否自动上推页面
+		adjustPosition: {
+			type: Boolean,
+            default: uni.$u.props.codeInput.adjustPosition
+		},
         // 最大输入长度
         maxlength: {
             type: [String, Number],
@@ -64,6 +69,11 @@ export default {
         borderColor: {
             type: String,
             default: uni.$u.props.codeInput.borderColor
-        }
+        },
+		// 是否禁止输入"."符号
+		disabledDot: {
+			type: Boolean,
+			default: uni.$u.props.codeInput.disabledDot
+		}
     }
 }

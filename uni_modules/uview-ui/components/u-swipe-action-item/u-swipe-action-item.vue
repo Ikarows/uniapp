@@ -141,18 +141,19 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	@import "../../libs/css/components.scss";
 
 	.u-swipe-action-item {
 		position: relative;
 		overflow: hidden;
-		/* #ifndef APP-NVUE */
-		touch-action: none;
+		/* #ifndef APP-NVUE || MP-WEIXIN */
+		touch-action: pan-y;
 		/* #endif */
 
 		&__content {
 			background-color: #FFFFFF;
+			z-index: 10;
 		}
 
 		&__right {

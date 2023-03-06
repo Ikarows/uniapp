@@ -72,13 +72,11 @@
 	</view>
 </template>
 
-<!-- #ifndef APP-NVUE || MP-WEIXIN || H5 || APP-VUE || MP-QQ -->
 <script
 	src="./scrollWxs.wxs"
 	module="wxs"
 	lang="wxs"
 ></script>
-<!-- #endif -->
 
 <script>
 /**
@@ -190,7 +188,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../libs/css/components.scss";
 
 .u-scroll-list {
