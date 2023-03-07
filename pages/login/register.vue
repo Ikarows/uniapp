@@ -8,13 +8,13 @@
       <!-- 主体 -->
       <view class="main">
         <wInput
-          v-model="phoneData"
+          v-model="form.phone"
           type="text"
           maxlength="11"
           placeholder="手机号"
         />
         <wInput
-          v-model="passData"
+          v-model="form.pwd"
           type="password"
           maxlength="11"
           placeholder="登录密码"
@@ -22,11 +22,21 @@
         />
         <wInput
           ref="runCode"
-          v-model="verCode"
+          v-model="form.smscode"
           type="number"
           maxlength="4"
           placeholder="验证码"
           is-show-code
+          @setCode="getVerCode()"
+        />
+        <wInput
+          ref="imgCode"
+          v-model="form.captcha"
+          type="number"
+          maxlength="4"
+          placeholder="图形码"
+          is-show-captcha
+          :captcha-img="captchaImg"
           @setCode="getVerCode()"
         />
       </view>
@@ -72,9 +82,14 @@ export default {
   },
   data () {
     return {
-      phoneData: '', // 用户/电话
-      passData: '', // 密码
-      verCode: '', // 验证码
+      form: {
+        phone: '17688799628', // 手机号
+        pwd: '', // 密码
+        smscode: '', // 验证码
+        module: 'engineer',
+        captcha: ''
+      },
+      captchaImg: '/static/img/logo.png',
       showAgree: true, // 协议是否选择
       isRotate: false // 是否加载旋转
     }
@@ -89,13 +104,21 @@ export default {
     },
     getVerCode () {
       // 获取验证码
-      if (_this.phoneData.length !== 11) {
+      if (this.form.phone === '') {
         uni.showToast({
           icon: 'none',
           position: 'bottom',
-          title: '手机号不正确'
+          title: '手机号不能为空'
         })
-        return false
+        return
+      }
+      if (!this.$funs.validatePhone(this.form.phone)) {
+        uni.showToast({
+          icon: 'none',
+          position: 'bottom',
+          title: '手机号格式错误'
+        })
+        return
       }
       console.log('获取验证码')
       this.$refs.runCode.$emit('runCode') // 触发倒计时（一般用于请求成功验证码后调用）
@@ -120,7 +143,7 @@ export default {
         // 判断是否加载中，避免重复点击请求
         return false
       }
-      if (this.showAgree == false) {
+      if (this.showAgree === false) {
         uni.showToast({
           icon: 'none',
           position: 'bottom',
@@ -128,23 +151,39 @@ export default {
         })
         return false
       }
-      if (this.phoneData.length != 11) {
+      if (this.form.phone === '') {
         uni.showToast({
           icon: 'none',
           position: 'bottom',
-          title: '手机号不正确'
+          title: '手机号不能为空'
         })
-        return false
+        return
       }
-      if (this.passData.length < 6) {
+      if (!this.$funs.validatePhone(this.form.phone)) {
         uni.showToast({
           icon: 'none',
           position: 'bottom',
-          title: '密码不正确'
+          title: '手机号格式错误'
         })
-        return false
+        return
       }
-      if (this.verCode.length != 4) {
+      if (this.form.pwd === '') {
+        uni.showToast({
+          icon: 'none',
+          position: 'bottom',
+          title: '密码不能为空'
+        })
+        return
+      }
+      if (this.form.pwd < 8) {
+        uni.showToast({
+          icon: 'none',
+          position: 'bottom',
+          title: '密码不能小于8位'
+        })
+        return
+      }
+      if (this.form.smscode.length !== 4) {
         uni.showToast({
           icon: 'none',
           position: 'bottom',
