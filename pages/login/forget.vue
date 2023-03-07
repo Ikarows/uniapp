@@ -64,7 +64,7 @@ export default {
   methods: {
     getVerCode () {
       // 获取验证码
-      if (_this.phoneData.length != 11) {
+      if (_this.phoneData.length !== 11) {
         uni.showToast({
           icon: 'none',
           position: 'bottom',
@@ -95,7 +95,7 @@ export default {
         // 判断是否加载中，避免重复点击请求
         return false
       }
-      if (this.phoneData.length != 11) {
+      if (this.phoneData.length !== 11) {
         uni.showToast({
           icon: 'none',
           position: 'bottom',
@@ -111,7 +111,7 @@ export default {
         })
         return false
       }
-      if (this.verCode.length != 4) {
+      if (this.verCode.length !== 4) {
         uni.showToast({
           icon: 'none',
           position: 'bottom',
