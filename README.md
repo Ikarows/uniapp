@@ -75,6 +75,7 @@ npm run lint
 │   │   ├── js         # 脚本
 │   │   └── css        # 样式（scss, css, less）
 │   ├── store          # Vuex 目录
+│   ├── uni_modules    # uni插件
 │   ├── utils          # 公用函数目录
 │   ├── App.vue        # vue 根文件
 │   ├── main.ts        # vue 入口js
